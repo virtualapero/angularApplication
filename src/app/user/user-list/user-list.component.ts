@@ -1,14 +1,15 @@
 import { RepositoryService } from "./../../shared/repository.service";
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 import { User } from "../../_interface/user.model";
+import { MatSort } from "@angular/material/sort";
 
 @Component({
   selector: "app-user-list",
   templateUrl: "./user-list.component.html",
   styleUrls: ["./user-list.component.css"],
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent implements OnInit, AfterViewInit {
   public displayedColumns = [
     "name",
     "twitterhandle",
@@ -18,10 +19,16 @@ export class UserListComponent implements OnInit {
   ];
   public dataSource = new MatTableDataSource<User>();
 
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(private repoService: RepositoryService) {}
 
   ngOnInit() {
     this.getAllUsers();
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
   }
 
   public getAllUsers = () => {
