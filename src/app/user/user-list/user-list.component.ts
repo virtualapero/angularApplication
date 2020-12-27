@@ -62,7 +62,10 @@ export class UserListComponent implements OnInit, AfterViewInit {
     this.router.navigate([url]);
   };
 
-  public redirectToUpdate = (id: string) => {};
+  public redirectToUpdate = (id: string) => {
+    const updateUrl: string = `/user/update/${id}`;
+    this.router.navigate([updateUrl]);
+  };
 
   public redirectToDelete = (id: string) => {};
 }
