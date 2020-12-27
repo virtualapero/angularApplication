@@ -37,6 +37,10 @@ export class UserListComponent implements OnInit, AfterViewInit {
     });
   };
 
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
+  };
+
   public redirectToDetails = (id: string) => {};
 
   public redirectToUpdate = (id: string) => {};
