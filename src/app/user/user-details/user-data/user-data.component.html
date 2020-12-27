@@ -1,0 +1,22 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title>Benutzer-Details</mat-card-title>
+        <mat-card-content>
+            <div fxLayout="column wrap" fxLayoutGap="40px">
+                <div fxLayout="row wrap" fxFlex>
+                    <div fxFlex><strong>Benutzername:</strong></div>
+                    <div fxFlex>{{user?.name}}</div>
+                </div>
+                <div fxLayout="row wrap" fxFlex>
+                    <div fxFlex><strong>Twitterhandle:</strong></div>
+                    <div fxFlex>{{user?.twitterhandle}}</div>
+                </div>
+
+                <div fxLayout="row wrap" fxFlex>
+                    <div fxFlex><strong>Benutzerlogo:</strong></div>
+                    <div fxFlex><img src="{{user?.image}}" style="width:35px;height:35px;"></div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</section>

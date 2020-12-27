@@ -12,9 +12,9 @@ import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./navigation/header/header.component";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
 import { HttpClientModule } from "@angular/common/http";
-import { UserModule } from './user/user.module';
-import { NotFoundComponent } from './error-pages/not-found/not-found.component';
-import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
+import { UserModule } from "./user/user.module";
+import { NotFoundComponent } from "./error-pages/not-found/not-found.component";
+import { ServerErrorComponent } from "./error-pages/server-error/server-error.component";
 
 @NgModule({
   declarations: [

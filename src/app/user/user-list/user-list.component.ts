@@ -5,6 +5,8 @@ import { User } from "../../_interface/user.model";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
 import { ErrorHandlerService } from "../../shared/error-handler.service";
+import { Router } from "@angular/router";
+import { fromEventPattern } from "rxjs";
 
 @Component({
   selector: "app-user-list",
@@ -14,6 +16,7 @@ import { ErrorHandlerService } from "../../shared/error-handler.service";
 export class UserListComponent implements OnInit, AfterViewInit {
   public displayedColumns = [
     "name",
+    "image",
     "twitterhandle",
     "details",
     "update",
@@ -26,7 +29,8 @@ export class UserListComponent implements OnInit, AfterViewInit {
 
   constructor(
     private repoService: RepositoryService,
-    private errorService: ErrorHandlerService
+    private errorService: ErrorHandlerService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -53,7 +57,10 @@ export class UserListComponent implements OnInit, AfterViewInit {
     this.dataSource.filter = value.trim().toLocaleLowerCase();
   };
 
-  public redirectToDetails = (id: string) => {};
+  public redirectToDetails = (id: string) => {
+    let url: string = `/user/details/${id}`;
+    this.router.navigate([url]);
+  };
 
   public redirectToUpdate = (id: string) => {};
 
