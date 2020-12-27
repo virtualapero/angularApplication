@@ -5,6 +5,7 @@ import { Location } from "@angular/common";
 import { UserForCreation } from "../../_interface/userForCreation.model";
 import { MatDialog } from "@angular/material/dialog";
 import { SuccessDialogComponent } from "src/app/shared/dialogs/success-dialog/success-dialog.component";
+import { ErrorHandlerService } from "../../shared/error-handler.service";
 
 @Component({
   selector: "app-user-create",
@@ -18,7 +19,8 @@ export class UserCreateComponent implements OnInit {
   constructor(
     private location: Location,
     private repository: RepositoryService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private errorService: ErrorHandlerService
   ) {}
 
   ngOnInit() {
@@ -78,8 +80,9 @@ export class UserCreateComponent implements OnInit {
         });
       },
       (error) => {
-        //temporary as well
-        this.location.back();
+        this.errorService.dialogConfig = { ...this.dialogConfig };
+        this.errorService.handleError(error);
+        //this.location.back();
       }
     );
   };
