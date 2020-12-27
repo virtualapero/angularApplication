@@ -1,7 +1,11 @@
-<div fxLayout fxLayoutAlign="center center">
+<div fxLayout fxLayout.lt-md="column wrap" fxLayoutAlign="center center" fxLayoutGap.gt-sm="250px"
+    fxLayoutGap.lt.md="20px">
     <mat-form-field fxFlex="40%">
         <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
+    <div>
+        <a [routerLink]="['/user/create']" mat-button color="primary">Erstelle neuen Benutzer</a>
+    </div>
 </div>
 
 <table mat-table [dataSource]="dataSource" matSort>

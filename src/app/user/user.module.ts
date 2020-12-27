@@ -6,9 +6,22 @@ import { MaterialModule } from "./../material/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { UserDetailsComponent } from "./user-details/user-details.component";
 import { UserDataComponent } from "./user-details/user-data/user-data.component";
+import { UserCreateComponent } from "./user-create/user-create.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  declarations: [UserListComponent, UserDetailsComponent, UserDataComponent],
-  imports: [CommonModule, UserRoutingModule, MaterialModule, FlexLayoutModule],
+  declarations: [
+    UserListComponent,
+    UserDetailsComponent,
+    UserDataComponent,
+    UserCreateComponent,
+  ],
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+  ],
 })
 export class UserModule {}
