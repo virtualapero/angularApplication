@@ -13,6 +13,8 @@ import { HeaderComponent } from "./navigation/header/header.component";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
 import { HttpClientModule } from "@angular/common/http";
 import { UserModule } from './user/user.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { UserModule } from './user/user.module';
     HomeComponent,
     HeaderComponent,
     SidenavListComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
   ],
   imports: [
     BrowserModule,
