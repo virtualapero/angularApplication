@@ -5,8 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { RoutingModule } from "./routing/routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FlexLayoutModule } from "@angular/flex-layout";
-import { MaterialModule } from "./material/material.module";
+//import { FlexLayoutModule } from "@angular/flex-layout";
+//import { MaterialModule } from "./material/material.module";
 import { LayoutComponent } from "./layout/layout.component";
 import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./navigation/header/header.component";
@@ -15,6 +15,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { UserModule } from "./user/user.module";
 import { NotFoundComponent } from "./error-pages/not-found/not-found.component";
 import { ServerErrorComponent } from "./error-pages/server-error/server-error.component";
+
+import { SharedModule } from "../app/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -31,10 +33,11 @@ import { ServerErrorComponent } from "./error-pages/server-error/server-error.co
     AppRoutingModule,
     RoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    FlexLayoutModule,
+    // MaterialModule,
+    // FlexLayoutModule,
     HttpClientModule,
     UserModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
