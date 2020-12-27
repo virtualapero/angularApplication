@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { RepositoryService } from "./../../shared/repository.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { Location, NgLocalization } from "@angular/common";
+import { Location } from "@angular/common";
 import { UserForCreation } from "../../_interface/userForCreation.model";
 
 @Component({

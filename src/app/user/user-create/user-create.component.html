@@ -1,7 +1,7 @@
 <section fxLayout="row wrap" fxLayoutAlign="center center">
     <mat-card fxFlex="500px" fxFlex.xs="100%">
         <mat-card-title>Erstelle einen neuen Benutzer</mat-card-title>
-        <form [formGroup]="ownerForm" autocomplete="off" novalidate (ngSubmit)="createOwner(ownerForm.value)"
+        <form [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="createUser(userForm.value)"
             fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
             <mat-card-content>
                 <mat-form-field>
@@ -11,7 +11,7 @@
                     <mat-error *ngIf="hasError('name', 'maxlength')">Du hast mehr als 60 Zeichen genutzt</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Imagepfad" formControlName="image" id="Image">
+                    <input matInput type="text" placeholder="Imagepfad" formControlName="image" id="image">
                     <mat-hint align="end">Nicht länger als 60 Zeichen.</mat-hint>
                     <mat-error *ngIf="hasError('image', 'required')">Das Bild ist notwendig</mat-error>
                     <mat-error *ngIf="hasError('image', 'maxlength')">Du hast mehr als 60 Zeichen genutzt</mat-error>
@@ -25,7 +25,7 @@
                 </mat-form-field>
             </mat-card-content>
             <mat-card-actions align="center">
-                <button mat-raised-button color="primary" [disabled]="!ownerForm.valid">Speichern</button>
+                <button mat-raised-button color="primary" [disabled]="!userForm.valid">Speichern</button>
                 <button type="button" mat-raised-button color="warn" (click)="onCancel()">Abbrechen</button>
             </mat-card-actions>
         </form>
