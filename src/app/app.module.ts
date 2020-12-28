@@ -5,8 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { RoutingModule } from "./routing/routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-//import { FlexLayoutModule } from "@angular/flex-layout";
-//import { MaterialModule } from "./material/material.module";
+
 import { LayoutComponent } from "./layout/layout.component";
 import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./navigation/header/header.component";
@@ -17,6 +16,7 @@ import { NotFoundComponent } from "./error-pages/not-found/not-found.component";
 import { ServerErrorComponent } from "./error-pages/server-error/server-error.component";
 
 import { SharedModule } from "../app/shared/shared.module";
+import { AperoModule } from "./apero/apero.module";
 
 @NgModule({
   declarations: [
@@ -33,11 +33,10 @@ import { SharedModule } from "../app/shared/shared.module";
     AppRoutingModule,
     RoutingModule,
     BrowserAnimationsModule,
-    // MaterialModule,
-    // FlexLayoutModule,
     HttpClientModule,
     UserModule,
     SharedModule,
+    AperoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

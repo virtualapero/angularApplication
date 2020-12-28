@@ -11,6 +11,11 @@ const routes: Routes = [
     path: "user",
     loadChildren: () => import("../user/user.module").then((m) => m.UserModule),
   },
+  {
+    path: "apero",
+    loadChildren: () =>
+      import("../apero/apero.module").then((m) => m.AperoModule),
+  },
   { path: "404", component: NotFoundComponent },
   { path: "500", component: ServerErrorComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
