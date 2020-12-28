@@ -67,5 +67,8 @@ export class UserListComponent implements OnInit, AfterViewInit {
     this.router.navigate([updateUrl]);
   };
 
-  public redirectToDelete = (id: string) => {};
+  public redirectToDelete = (id: string) => {
+    const deleteUrl: string = `/user/delete/${id}`;
+    this.router.navigate([deleteUrl]);
+  };
 }

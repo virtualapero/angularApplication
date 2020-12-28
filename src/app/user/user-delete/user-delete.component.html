@@ -1,7 +1,7 @@
 <section fxLayout="row wrap" fxLayoutAlign="center center">
     <mat-card fxFlex="500px" fxFlex.xs="100%">
-        <mat-card-title>Benutzer ändern</mat-card-title>
-        <form [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="updateUser(userForm.value)"
+        <mat-card-title>Benutzer löschen</mat-card-title>
+        <form [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="deleteUser(userForm.value)"
             fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
             <mat-card-content>
                 <mat-form-field>

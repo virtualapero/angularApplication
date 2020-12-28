@@ -8,6 +8,7 @@ import { UserCreateComponent } from "./user-create/user-create.component";
 import { UserUpdateComponent } from "./user-update/user-update.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { SharedModule } from "./../shared/shared.module";
+import { UserDeleteComponent } from './user-delete/user-delete.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SharedModule } from "./../shared/shared.module";
     UserDataComponent,
     UserCreateComponent,
     UserUpdateComponent,
+    UserDeleteComponent,
   ],
   imports: [CommonModule, UserRoutingModule, ReactiveFormsModule, SharedModule],
 })
