@@ -1,7 +1,7 @@
 mat-card-content,
 mat-card-title,
 mat-card-actions {
-  text-align: center;
+  text-align: left;
 }
 
 mat-card-content {
@@ -11,4 +11,26 @@ mat-card-content {
 
 .basiccontainer {
   margin-bottom: 10px;
+}
+
+.child-1,
+.child-2 {
+  background-color: #3f52b5;
+  color: #ffffff;
+}
+
+mat-list-item {
+  color: #ffffff;
+}
+
+mat-card-subtitle {
+  color: #ffffff;
+}
+
+mat-nav-list a {
+  color: #ffffff;
+}
+
+.basiccontainer mat-card-subtitle {
+  color: #000000;
 }

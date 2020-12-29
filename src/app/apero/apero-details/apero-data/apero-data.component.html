@@ -31,14 +31,9 @@
         </mat-card-header>
     </mat-card>
 </div>
-<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
+<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around start"
     fxLayoutGap="25px">
     <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-        <!-- <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title> </mat-card-title>
-            <mat-card-subtitle></mat-card-subtitle>
-        </mat-card-header>-->
         <img mat-card-image src=" {{apero?.image}}" alt="Photo of virtualApero from {{apero?.datum}}">
         <mat-card-content>
 
@@ -55,23 +50,32 @@
         </mat-card-content>
     </mat-card>
 </div>
-<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
-    fxLayoutGap="25px">
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
     <mat-card *ngFor="let th of apero?.themen" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
         <mat-card-header>
             <mat-card-title>{{th.name}}</mat-card-title>
             <mat-card-subtitle></mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <!-- <mat-card fxLayout="column" fxLayoutGap="20px">-->
-            <p>
-                {{th.description}}
-            </p>
+            <mat-card fxLayout="column" fxLayoutGap="20px">
+                <mat-card class="child-1">
+                    <mat-card-header>
+                        <mat-card-title>Beschreibung</mat-card-title>
+                        <mat-card-subtitle>{{th.description}}</mat-card-subtitle>
+                    </mat-card-header>
 
-            <mat-nav-list>
-                <a mat-list-item href="{{l.url}}" *ngFor="let l of th.links"> {{ l.linkname }} </a>
-            </mat-nav-list>
-            <!-- </mat-card>-->
+                </mat-card>
+
+                <mat-card class="child-2">
+                    <mat-card-header>
+                        <mat-card-title>Links zu Informationen</mat-card-title>
+                    </mat-card-header>
+                    <mat-nav-list>
+                        <a mat-list-item href="{{l.url}}" *ngFor="let l of th.links"> {{ l.linkname }} </a>
+                    </mat-nav-list>
+                </mat-card>
+
+            </mat-card>
         </mat-card-content>
     </mat-card>
 
