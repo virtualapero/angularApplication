@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Apero } from "./../../_interface/apero.model";
+import { User } from "./../../_interface/user.model";
 import { Router, ActivatedRoute } from "@angular/router";
 import { RepositoryService } from "./../../shared/repository.service";
 import { ErrorHandlerService } from "./../../shared/error-handler.service";
@@ -10,6 +11,7 @@ import { ErrorHandlerService } from "./../../shared/error-handler.service";
   styleUrls: ["./apero-details.component.css"],
 })
 export class AperoDetailsComponent implements OnInit {
+  @Input() public users: User[];
   public apero: Apero;
 
   constructor(

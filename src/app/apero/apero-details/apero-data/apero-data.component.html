@@ -1,26 +1,3 @@
-<!--<section fxLayout="row wrap" fxLayoutAlign="center center">
-    <mat-card fxFlex="500px" fxFlex.xs="33%">
-        <mat-card-title>Apero Details vom {{apero?.datum}}</mat-card-title>
-        <mat-card-content>
-            <div fxLayout="column wrap" fxLayoutGap="40px">
-
-
-                <div fxLayout="row wrap" fxFlex>
-                    <div fxFlex><strong>Datum:</strong></div>
-                    <div fxFlex>{{apero?.datum}}</div>
-                </div>
-                <div fxLayout="row wrap" fxFlex>
-                    <div fxFlex><strong>Apero Image:</strong></div>
-                    <div fxFlex><img src="{{apero?.image}}" style="width:35px;height:35px;"></div>
-                </div>
-
-            </div>
-        </mat-card-content>
-
-    </mat-card>
-
-
-</section>-->
 <div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
     fxLayoutGap="25px">
     <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
@@ -46,8 +23,14 @@
             <mat-card-subtitle></mat-card-subtitle>
         </mat-card-header>
         <mat-card-content *ngFor="let t of apero?.teilnehmer">
+            <!--<mat-card-content *ngFor="let t of apero?.teilnehmer">
+            <p *ngFor="let user of users; let t=index">
+                {{user}}
+            </p>-->
             {{t}}
         </mat-card-content>
+
+        <!--</mat-card-content>-->
     </mat-card>
 </div>
 <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">

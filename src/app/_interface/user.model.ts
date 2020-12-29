@@ -4,6 +4,4 @@ export interface User {
   name: string;
   image: string;
   twitterhandle: string;
-
-  accounts?: Account;
 }

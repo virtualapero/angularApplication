@@ -5,7 +5,8 @@ export interface Apero {
   datum: Date;
   image: string;
 
-  teilnehmer?: User;
+  //teilnehmer?: User;
+  teilnehmer?: User[];
 
   themen?: Themen;
 }
