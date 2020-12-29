@@ -1,0 +1,78 @@
+<!--<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="33%">
+        <mat-card-title>Apero Details vom {{apero?.datum}}</mat-card-title>
+        <mat-card-content>
+            <div fxLayout="column wrap" fxLayoutGap="40px">
+
+
+                <div fxLayout="row wrap" fxFlex>
+                    <div fxFlex><strong>Datum:</strong></div>
+                    <div fxFlex>{{apero?.datum}}</div>
+                </div>
+                <div fxLayout="row wrap" fxFlex>
+                    <div fxFlex><strong>Apero Image:</strong></div>
+                    <div fxFlex><img src="{{apero?.image}}" style="width:35px;height:35px;"></div>
+                </div>
+
+            </div>
+        </mat-card-content>
+
+    </mat-card>
+
+
+</section>-->
+<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
+    fxLayoutGap="25px">
+    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Apero Details vom </mat-card-title>
+            <mat-card-subtitle>{{apero?.datum}}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
+<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
+    fxLayoutGap="25px">
+    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+        <!-- <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title> </mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>-->
+        <img mat-card-image src=" {{apero?.image}}" alt="Photo of virtualApero from {{apero?.datum}}">
+        <mat-card-content>
+
+        </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Teilnehmer</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content *ngFor="let t of apero?.teilnehmer">
+            {{t}}
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
+    fxLayoutGap="25px">
+    <mat-card *ngFor="let th of apero?.themen" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+        <mat-card-header>
+            <mat-card-title>{{th.name}}</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <!-- <mat-card fxLayout="column" fxLayoutGap="20px">-->
+            <p>
+                {{th.description}}
+            </p>
+
+            <mat-nav-list>
+                <a mat-list-item href="{{l.url}}" *ngFor="let l of th.links"> {{ l.linkname }} </a>
+            </mat-nav-list>
+            <!-- </mat-card>-->
+        </mat-card-content>
+    </mat-card>
+
+</div>

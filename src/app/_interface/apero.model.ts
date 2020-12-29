@@ -2,6 +2,8 @@ import { User } from "./user.model";
 
 export interface Apero {
   id: string;
+  datum: Date;
+  image: string;
 
   teilnehmer?: User;
 
