@@ -43,7 +43,8 @@ export class UserListComponent implements OnInit, AfterViewInit {
   }
 
   public getAllUsers = () => {
-    this.repoService.getData("users").subscribe(
+   // this.repoService.getData("users").subscribe(
+    this.repoService.getData("api-user").subscribe(
       (res) => {
         this.dataSource.data = res as User[];
       },

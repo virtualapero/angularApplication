@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAddress: "http://localhost:3000",
+  urlAddress: "https://virtualapero:dienstag19uhr@dev.virtualapero.de/de/jsonapi/view",
 };
 
 /*
