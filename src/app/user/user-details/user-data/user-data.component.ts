@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { UserDetailsComponent } from "../user-details.component";
 import { User } from "./../../../_interface/user.model";
 
 @Component({

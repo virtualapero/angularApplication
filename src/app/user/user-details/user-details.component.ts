@@ -26,7 +26,8 @@ export class UserDetailsComponent implements OnInit {
 
   private getUserDetails = () => {
     let id: string = this.activeRoute.snapshot.params["id"];
-    let apiUrl: string = `users/${id}`;
+    //let apiUrl: string = `users/${id}`;
+    let apiUrl: string = `api-user/${id}`;
 
     this.repository.getData(apiUrl).subscribe(
       (res) => {
