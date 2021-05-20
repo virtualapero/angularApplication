@@ -5,16 +5,16 @@
             <div fxLayout="column wrap" fxLayoutGap="40px">
                 <div fxLayout="row wrap" fxFlex>
                     <div fxFlex><strong>Benutzername:</strong></div>
-                    <div fxFlex>{{user?.name}}</div>
+                    <div fxFlex>{{user[0].name}}</div>
                 </div>
                 <div fxLayout="row wrap" fxFlex>
                     <div fxFlex><strong>Twitterhandle:</strong></div>
-                    <div fxFlex>{{user?.twitterhandle}}</div>
+                    <div fxFlex>{{user[0].twitterhandle}}</div>
                 </div>
 
                 <div fxLayout="row wrap" fxFlex>
                     <div fxFlex><strong>Benutzerlogo:</strong></div>
-                    <div fxFlex><img src="{{user?.image}}" style="width:35px;height:35px;"></div>
+                    <div fxFlex><img src="{{user[0].image}}" style="width:35px;height:35px;"></div>
                 </div>
             </div>
         </mat-card-content>

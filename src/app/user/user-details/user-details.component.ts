@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { RepositoryService } from "./../../shared/repository.service";
 import { ErrorHandlerService } from "./../../shared/error-handler.service";
 
+
 @Component({
   selector: "app-user-details",
   templateUrl: "./user-details.component.html",
@@ -26,16 +27,18 @@ export class UserDetailsComponent implements OnInit {
 
   private getUserDetails = () => {
     let id: string = this.activeRoute.snapshot.params["id"];
-    //let apiUrl: string = `users/${id}`;
     let apiUrl: string = `api-user/${id}`;
 
-    this.repository.getData(apiUrl).subscribe(
-      (res) => {
-        this.user = res as User;
-      },
-      (error) => {
-        this.errorHandler.handleError(error);
-      }
-    );
+    this.repository.getData(apiUrl)
+    .subscribe(res => {
+      this.user = res as User;
+    },
+    (error) =>{
+      this.errorHandler.handleError(error);
+    })
   };
 }
+
+
+
+  
