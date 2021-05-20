@@ -27,7 +27,7 @@ export class AperoDetailsComponent implements OnInit {
 
   private getAperoDetails = () => {
     let id: string = this.activeRoute.snapshot.params["id"];
-    let apiUrl: string = `aperos/${id}`;
+    let apiUrl: string = `virtualaperos/${id}`;
 
     this.repository.getData(apiUrl).subscribe(
       (res) => {

@@ -13,7 +13,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./apero-list.component.css"],
 })
 export class AperoListComponent implements OnInit, AfterViewInit {
-  public displayedColumns = ["datum", "image", "details", "update", "delete"];
+  //public displayedColumns = ["titel", "datum", "details", "update", "delete"];
+  public displayedColumns = ["titel", "datum", "details"];
   public dataSource = new MatTableDataSource<Apero>();
 
   @ViewChild(MatSort) sort: MatSort;
@@ -39,7 +40,7 @@ export class AperoListComponent implements OnInit, AfterViewInit {
   };
 
   public getAllAperos = () => {
-    this.repoService.getData("aperos").subscribe(
+    this.repoService.getData("virtualaperos").subscribe(
       (res) => {
         this.dataSource.data = res as Apero[];
         //console.log(this.dataSource.data);

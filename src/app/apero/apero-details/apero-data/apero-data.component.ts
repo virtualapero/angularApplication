@@ -1,6 +1,5 @@
-import { Apero, Themen } from "./../../../_interface/apero.model";
+import { Apero } from "./../../../_interface/apero.model";
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { User } from "src/app/_interface/user.model";
 
 @Component({
   selector: "app-apero-data",
@@ -9,16 +8,8 @@ import { User } from "src/app/_interface/user.model";
 })
 export class AperoDataComponent implements OnInit {
   @Input() public apero: Apero;
-  @Input() public users: User;
-
-  /* public selectOptions = [{name:'Show', value: 'show'}, {name: `Don't Show`, value: ''}];
-  @Output() selectEmitt = new EventEmitter();*/
-
+  
   constructor() {}
 
   ngOnInit() {}
-
-  /*public onChange = (event) => {
-    this.selectEmitt.emit(event.value);
-  }*/
 }
