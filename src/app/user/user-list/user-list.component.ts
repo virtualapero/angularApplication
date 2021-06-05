@@ -17,10 +17,10 @@ export class UserListComponent implements OnInit, AfterViewInit {
   public displayedColumns = [
     "name",
     "image",
-    "twitterhandle",
+  /*  "twitterhandle",*/
     "details",
-    "update",
-    "delete",
+   /* "update",
+    "delete",*/
   ];
   public dataSource = new MatTableDataSource<User>();
 

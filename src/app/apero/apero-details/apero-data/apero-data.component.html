@@ -1,45 +1,21 @@
-<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"
-    fxLayoutGap="25px">
-    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Das war der {{apero[0].titel}} vom {{apero[0].datum}}</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-</div>
-<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around start"
-    fxLayoutGap="25px">
-    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-        <mat-card-header>
-            <mat-card-title>Teilnehmer</mat-card-title>
-            <mat-card-subtitle>{{apero[0].teilnehmer}}</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
-    
-</div>
-<div class="basiccontainer" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around start"
-    fxLayoutGap="25px">
-    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-        <mat-card-header>
-            <mat-card-title>Wer durfte, konnte, sollte?</mat-card-title>
-            <mat-card-subtitle>{{apero[0].willkommen}}</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
-</div>
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
-    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-        <mat-card-content>
-            <mat-card fxLayout="column" fxLayoutGap="20px">
-                <mat-card class="child-1">
-                    <mat-card-header>
-                        <mat-card-title>Inhalt</mat-card-title>
-                        <mat-card-subtitle>{{apero[0].inhalt}}</mat-card-subtitle>
-                    </mat-card-header>
 
-                </mat-card>
-
-            </mat-card>
-        </mat-card-content>
-    </mat-card>
-
-</div>
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{apero[0].titel}}</mat-card-title>
+      <mat-card-subtitle>vom {{apero[0].datum}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{apero[0].image}}" alt="Photo of virtualApero from {{apero?.datum}}">
+    <mat-card-content>
+        <mat-card-title>Wer durfte, konnte, sollte?</mat-card-title>
+        <mat-card-subtitle>{{apero[0].willkommen}}</mat-card-subtitle>
+        <mat-card-title>Was ist neu?</mat-card-title>
+        <mat-card-subtitle>{{apero[0].inhalt}}</mat-card-subtitle>
+        <mat-card-title>Teilnehmer</mat-card-title>
+        <mat-card-subtitle>{{apero[0].teilnehmer}}</mat-card-subtitle>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>

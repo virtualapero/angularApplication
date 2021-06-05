@@ -9,28 +9,24 @@ mat-card-content {
   padding-bottom: 20px;
 }
 
-.basiccontainer {
-  margin-bottom: 10px;
+.example-card {
+  max-width: 400px;
 }
 
-.child-1,
+/*.child-1,
 .child-2 {
   background-color: #3f52b5;
   color: #ffffff;
-}
+}*/
 
 mat-list-item {
   color: #ffffff;
 }
 
 mat-card-subtitle {
-  color: #ffffff;
+  color: #000000;
 }
 
 mat-nav-list a {
   color: #ffffff;
-}
-
-.basiccontainer mat-card-subtitle {
-  color: #000000;
 }
